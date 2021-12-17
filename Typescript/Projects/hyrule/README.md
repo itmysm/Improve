@@ -1,4 +1,4 @@
-# cat-fact
+# hyrule
 
 ## Project setup
 ```
