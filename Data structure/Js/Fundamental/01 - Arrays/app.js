@@ -1,17 +1,15 @@
-const set = new Set();
-
-
-set.add(1)
-
-set.add(2)
-
-set.add(1)
+const set = new Set()
+const list = [1, 2, 3, 4, 3, 2, 1, 34, 1, 2, 3, 4, 3, 2, 1, 34, 1, 2, 3, 4, 3, 2, 1, 34, 1, 2, 3, 4, 3, 2, 1, 34]
+let cleanedList = []
 
 
 
-for (const item of set) {
-    console.log(item);
+
+
+for (const item of list) {
+
+    cleanedList.push(set.add(item))
+
 }
 
-
-console.log(set.has(1));
+console.log(cleanedList);
