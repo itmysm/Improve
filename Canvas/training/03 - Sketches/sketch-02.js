@@ -40,6 +40,18 @@ const sketch = () => {
       context.rect(-w * 0.5, -h * 0.5, w, h);
       context.fill()
       context.restore()
+
+      context.save();
+      context.translate(cx, cy);
+      context.rotate(-angle)
+
+      context.lineWidth = 20;
+
+      context.beginPath();
+      context.arc(0, 0, radius, slice * -0.3, slice * 0.3)
+      context.stroke();
+
+      context.restore();
     }
   };
 };
