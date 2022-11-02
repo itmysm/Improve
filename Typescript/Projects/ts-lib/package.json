@@ -1,0 +1,15 @@
+{
+  "name": "ts-lib",
+  "version": "0.1.0",
+  "description": "my first lib with ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "del -f dist/lib && tsc && tsc --build tsconfig.es5.json"
+  },
+  "author": "itmysm",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.8.2"
+  }
+}
