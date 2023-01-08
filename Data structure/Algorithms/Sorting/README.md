@@ -28,3 +28,12 @@ index - 1
 <p>
 برای مرتب‌سازی لیست با استفاده از مرتب‌سازی انتخابی، از ابتدای لیست شروع کرده و کوچک‌ترین عنصر را پیدا می‌کنید. سپس آن عنصر را با اولین عنصر لیست عوض کنید. شما این فرآیند را برای بقیه لیست تکرار می کنید، به موقعیت بعدی می روید و کوچکترین عنصر را در قسمت مرتب نشده لیست پیدا می کنید و آن را با عنصر موجود در آن موقعیت تعویض می کنید.
 </p>
+
+
+<br/>
+<br/>
+
+<h3 align="right">(Selection Sort) مرتب سازی انتخابی</h3>
+<p>
+Merge sort is an efficient, general-purpose, comparison-based sorting algorithm. It works by dividing an array into two halves, sorting each half, and then merging them back together. During the merge process, the two halves are combined in a way that results in a fully sorted array.
+</p>
