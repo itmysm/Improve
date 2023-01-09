@@ -33,7 +33,7 @@ index - 1
 <br/>
 <br/>
 
-<h3 align="right">(Selection Sort) مرتب سازی انتخابی</h3>
+<h3 align="right">(Merge Sort) مرتب سازی ادغامی </h3>
 <p>
 Merge sort is an efficient, general-purpose, comparison-based sorting algorithm. It works by dividing an array into two halves, sorting each half, and then merging them back together. During the merge process, the two halves are combined in a way that results in a fully sorted array.
 </p>
