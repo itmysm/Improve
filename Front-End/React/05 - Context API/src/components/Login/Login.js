@@ -20,9 +20,17 @@ const Login = (props) => {
   };
   
   useEffect(() => {
-    setFormIsValid(
-      enteredPassword.trim().length > 6 && enteredEmail.includes('@')
-    );
+    const identifier = setTimeout(() => {
+      console.log('Checking Form Validaty!!');
+      setFormIsValid(
+        enteredPassword.trim().length > 6 && enteredEmail.includes('@')
+      );
+    }, 900);
+
+    return () => {
+      console.log('CLEANUP!!');
+      clearTimeout(identifier)
+    }
   }, [enteredEmail, enteredPassword])
 
   const passwordChangeHandler = (event) => {
