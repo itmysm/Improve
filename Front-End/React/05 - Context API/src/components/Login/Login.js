@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useReducer, useState } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
+
+const emailReducer = (state, action) => {
+  return {value: '',
+   isValid: false
+  };
+}
 
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -18,8 +24,12 @@ const Login = (props) => {
       event.target.value.includes('@') && enteredPassword.trim().length > 6
     );
   };
+  const [emailState, dispatchEmail] = useReducer(emailReducer, {
+    value: '',
+    isValid: false
+  });
   
-  useEffect(() => {
+  /*useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking Form Validaty!!');
       setFormIsValid(
@@ -31,16 +41,18 @@ const Login = (props) => {
       console.log('CLEANUP!!');
       clearTimeout(identifier)
     }
-  }, [enteredEmail, enteredPassword])
+  }, [enteredEmail, enteredPassword])*/
 
   const passwordChangeHandler = (event) => {
     setEnteredPassword(event.target.value);
 
-
+    setFormIsValid(
+      emailState.isValid && event.target.value.trim().length > 6
+    )
   };
 
   const validateEmailHandler = () => {
-    setEmailIsValid(enteredEmail.includes('@'));
+    setEmailIsValid(emailState.isValid);
   };
 
   const validatePasswordHandler = () => {
@@ -49,7 +61,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(enteredEmail, enteredPassword);
+    props.onLogin(emailState.value, enteredPassword);
   };
 
   return (
@@ -57,14 +69,14 @@ const Login = (props) => {
       <form onSubmit={submitHandler}>
         <div
           className={`${classes.control} ${
-            emailIsValid === false ? classes.invalid : ''
+            emailState.isValid === false ? classes.invalid : ''
           }`}
         >
           <label htmlFor="email">E-Mail</label>
           <input
             type="email"
             id="email"
-            value={enteredEmail}
+            value={emailState.value}
             onChange={emailChangeHandler}
             onBlur={validateEmailHandler}
           />
