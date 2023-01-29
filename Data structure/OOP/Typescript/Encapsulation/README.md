@@ -1,4 +1,4 @@
-###JavaScript Encapsulation
+### JavaScript Encapsulation
 
 Encapsulation in JavaScript refers to the practice of hiding the internal state and behavior of an object, and only exposing a public interface for interacting with that object. This allows for greater control over how the object is used, and helps to prevent unintended consequences caused by direct manipulation of the object's internal state.
 
