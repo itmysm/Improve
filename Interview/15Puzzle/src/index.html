@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>15 Puzzle Game 🎮 🎈</title>
+</head>
+
+<body>
+  <div class="main">
+    <section class="controls">
+      
+      <form class="pure-form">
+        <fieldset>
+          <legend>Game Controls</legend>
+
+          <label>
+            Board:
+            <select id="boardGame" name="">
+              <option value="default">default</option>
+            </select>
+          </label>
+
+          <label>
+            Rows
+            <input id="boardRows" type="number" placeholder="rows"/>
+          </label>
+          <label>
+            Column
+            <input id="boardColumns" type="number" placeholder="columns" />
+          </label>
+         
+          <label>
+            Tile size (px)
+            <input id="tileSize" type="number" />
+          </label>
+
+          <span id="parentApplyBtn">
+            <button id="controlsApply" class="pure-button">Apply</button>
+          </span>
+          <button id="addNewBoard" class="pure-button">Add New Board</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="gameBoard">
+    </section>
+  </div>
+
+
+  <script src="./scripts/main.js" type="module"></script>
+</body>
+
+</html>

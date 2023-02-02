@@ -1,0 +1,23 @@
+.gameBoard {
+  margin: 4em 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  /* border: 1px solid #000 */
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background-color: bisque;
+  cursor: pointer;
+}
+
+.empty {
+  opacity: 0 !important;
+  cursor:context-menu;
+}

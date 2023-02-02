@@ -1,0 +1,11 @@
+@import './elements/buttons.css';
+@import './elements/inputs.css';
+@import './board.css';
+
+body {
+  background-color: rgba(241, 92, 204, 0.795);
+}
+
+form label {
+  margin: 0 1em 0 0 !important;
+}
