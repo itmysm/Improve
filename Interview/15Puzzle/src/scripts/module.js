@@ -12,25 +12,25 @@ class BoardGame {
     rows.forEach((row, index) => {
       rows[index] = new Array(this.cols).fill(0).map(col => this.counter++)
     })
-
+    
     this.shuffle(rows)
   } // tiles Initialized
-
+  
   shuffle(arr2D) {
     const mergedArray = [].concat(...arr2D) // turn 2D array to 1D for shuffling
     mergedArray.sort((a, b) => 0.5 - Math.random()) // shuffling
     while (mergedArray.length) this.tiles.push(mergedArray.splice(0, this.cols)); // turn back to 2D array
 
     const status = isSolvable(this.tiles)
-
+    
     if (status) {
-      this.createBoard
+      this.createBoard()
     } else {
       this.tiles = []
       this.shuffle(arr2D)
     }
   }
-
+  
   createBoard() {
     const gameBoard = document.querySelector('.gameBoard')
     const table = document.createElement('table')

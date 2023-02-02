@@ -72,12 +72,13 @@ function updateControls() {
   const boardGamesKey = Object.keys(boards)
   let board; // 
 
+  
   boardGamesKey.forEach(key => {
     if (activeBoardGame === key) {
       board = boards[key]
     }
   });
-
+  
   if (checkNewSettings(board.settings)) {
     board.settings.rows = rowsInput.value
     board.settings.columns = columnsInput.value
