@@ -1,2 +1,8 @@
 @import './fonts.css';
-@import './tailwind.css'
+@import './tailwind.css';
+
+
+
+.bg-surface--gradient {
+  background: linear-gradient(200.68deg, rgb(var(--color-surface-300) / 0%), rgb(var(--color-surface-300) / 82.07%));
+}
