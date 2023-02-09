@@ -1,10 +1,10 @@
 <template>
-  <div class="h-screen bg-surface-100">
+  <div class="bg h-screen bg-surface-100">
     <header>
       <TheHeader />
     </header>
 
-    <hr class="w-full h-[2px] bg-surface-200">
+    <hr class="w-full h-[2px] bg-surface-300">
 
     <div class="w-full flex justify-between mt-16 px-12">
       <NewUser />
@@ -26,4 +26,11 @@ onMounted(() => {
   useMainStore().applyAppearance()
 })
 </script>
+
+<style>
+  .bg {
+    background-image: url('./assets/icons/noise.png');
+    background-repeat: repeat;
+  }
+</style>
 
