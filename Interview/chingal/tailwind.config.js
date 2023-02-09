@@ -35,6 +35,7 @@ module.exports = {
       'surface-900': 'rgb(var(--color-surface-900) / <alpha-value>)',
 
       gray: 'rgb(var(--color-gray) / <alpha-value>)',
+      'gray-0': 'rgb(var(--color-gray-0) / <alpha-value>)',
       'gray-100': 'rgb(var(--color-gray-100) / <alpha-value>)',
       'gray-200': 'rgb(var(--color-gray-200) / <alpha-value>)',
       'gray-300': 'rgb(var(--color-gray-300) / <alpha-value>)',
@@ -126,6 +127,11 @@ module.exports = {
     fontFamily: {
       'sans': ['yekan', 'Arial', 'sans-serif'],
     },
+
+    backgroundImage: {
+      'arrow-left': "url('./src/assets/icons/arrow-left.png')",
+    },
+
     extend: {},
   },
   plugins: [],

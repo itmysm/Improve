@@ -19,8 +19,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Switch } from '@headlessui/vue'
+import { useMainStore } from '../../stores/';
 
-const theme = ref(false)
+const theme = ref(false) // dark = false & light = true
+
+watch(() => theme.value, (newVal) => {
+  useMainStore().setNewTheme(newVal ? 'light' : 'dark')
+})
 </script>

@@ -20,6 +20,12 @@ export const useMainStore = defineStore('main', {
         localStorage.setItem('appearance', JSON.stringify(this.appearance)) // add default setting
         appearanceSetter(this.appearance)
       }
+    },
+
+    setNewTheme(newTheme) {
+      this.appearance.theme = newTheme
+      localStorage.setItem('appearance', JSON.stringify(this.appearance)) // new settings
+      this.applyAppearance()
     }
   },
 })
