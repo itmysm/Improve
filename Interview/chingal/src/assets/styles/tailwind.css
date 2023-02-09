@@ -6,48 +6,227 @@
 @layer base {
   [data-theme="light"] {
     --color-transparent: transparent;
-    --color-white: 255 255 255;
-    --color-black: 0 0 0;
-    --color-background: 255 255 255;
-    --color-def: 0 0 0;
-    --color-main: 255 255 255;
-    --color-primary: 0 124 255;
-    --color-primary-content: 209 233 241;
-    --color-primary-active: 130 96 244;
-    --color-secondary: 0 0 0;
-    --color-secondary-content: 0 0 0;
-    --color-info: 0 155 229;
-    --color-info-content: 209 233 241;
-    --color-info-active: 130 96 244;
 
-    --color-neutral: 98 159 174;
-    --color-neutral-content: 255 255 255;
-    --color-neutral-active: 66 123 138;
+    --color-primary: 5 89 253;
+    --color-primary-100: 226 237 254;
+    --color-primary-200: 171 200 253;
+    --color-primary-300: 116 163 253;
+    --color-primary-400: 30 105 253;
+    --color-primary-500: 5 89 253;
+    --color-primary-600: 5 81 231;
+    --color-primary-700: 3 54 153;
+    --color-primary-800: 2 36 103;
+    --color-primary-900: 2 19 53;
 
-    --color-bermuda: 249 248 113;
-    --color-error: 244 63 94;
-    --color-warning: 250 204 21;
+    --color-surface: 126 132 142;
+    --color-surface-100: 251 253 254;
+    --color-surface-200: 243 248 252;
+    --color-surface-300: 220 233 252;
+    --color-surface-400: 196 212 236;
+    --color-surface-500: 126 132 142;
+    --color-surface-600: 47 55 86;
+    --color-surface-700: 24 32 64;
+    --color-surface-800: 12 19 44;
+    --color-surface-900: 2 11 31;
+
+    --color-gray: 103 103 103;
+    --color-gray-100: 205 205 205;
+    --color-gray-200: 179 179 179;
+    --color-gray-300: 154 154 154;
+    --color-gray-400: 128 128 128;
+    --color-gray-500: 103 103 103;
+    --color-gray-600: 78 78 78;
+    --color-gray-700: 51 51 51;
+    --color-gray-800: 26 26 26;
+    --color-gray-900: 0 0 0;
+
+    --colors-green: 6 35 36;
+    --colors-green-100: 230 253 237;
+    --colors-green-200: 183 253 198;
+    --colors-green-300: 136 253 158;
+    --colors-green-400: 63 253 96;
+    --colors-green-500: 42 253 79;
+    --colors-green-600: 38 229 74;
+    --colors-green-700: 24 144 58;
+    --colors-green-800: 15 90 47;
+    --colors-green-900: 6 35 36;
+
+    --colors-orange: 255 155 11;
+    --colors-orange-100: 251 243 230;
+    --colors-orange-200: 252 221 175;
+    --colors-orange-300: 253 199 120;
+    --colors-orange-400: 255 165 35;
+    --colors-orange-500: 255 155 11;
+    --colors-orange-600: 230 140 13;
+    --colors-orange-700: 141 90 20;
+    --colors-orange-800: 84 57 24;
+    --colors-orange-900: 27 25 29;
+
+    --colors-pink: 237 33 255;
+    --colors-pink-100: 250 231 254;
+    --colors-pink-200: 247 181 255;
+    --colors-pink-300: 244 132 255;
+    --colors-pink-400: 239 55 255;
+    --colors-pink-500: 237 33 255;
+    --colors-pink-600: 214 31 233;
+    --colors-pink-700: 132 23 154;
+    --colors-pink-800: 79 18 104;
+    --colors-pink-900: 26 13 53;
+
+    --colors-purple: 121 38 255;
+    --colors-purple-100: 238 232 254;
+    --colors-purple-200: 208 183 255;
+    --colors-purple-300: 179 135 255;
+    --colors-purple-400: 134 60 255;
+    --colors-purple-500: 121 38 255;
+    --colors-purple-600: 109 35 233;
+    --colors-purple-700: 67 26 154;
+    --colors-purple-800: 40 20 104;
+    --colors-purple-900: 14 14 53;
+
+    --colors-red: 255 50 49;
+    --colors-red-100: 251 233 233;
+    --colors-red-200: 252 187 187;
+    --colors-red-300: 253 142 141;
+    --colors-red-400: 255 70 69;
+    --colors-red-500: 255 50 49;
+    --colors-red-600: 230 46 47;
+    --colors-red-700: 141 33 41;
+    --colors-red-800: 84 24 37;
+    --colors-red-900: 27 15 33;
+
+    --colors-sky-blue: 8 252 255;
+    --colors-sky-blue-100: 227 253 254;
+    --colors-sky-blue-200: 172 253 255;
+    --colors-sky-blue-300: 118 253 255;
+    --colors-sky-blue-400: 32 252 255;
+    --colors-sky-blue-500: 8 252 255;
+    --colors-sky-blue-600: 7 228 233;
+    --colors-sky-blue-700: 5 143 154;
+    --colors-sky-blue-800: 12 19 44;
+    --colors-sky-blue-900: 3 35 53;
+
+    --colors-yellow: 250 255 0;
+    --colors-yellow-100: 251 253 229;
+    --colors-yellow-200: 251 254 172;
+    --colors-yellow-300: 250 254 115;
+    --colors-yellow-400: 250 255 25;
+    --colors-yellow-500: 250 255 0;
+    --colors-yellow-600: 225 231 3;
+    --colors-yellow-700: 138 145 14;
+    --colors-yellow-800: 82 90 21;
+    --colors-yellow-900: 27 35 28;
   }
 
   [data-theme="dark"] {
-    --color-transparent: transparent;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-background: #212121;
-    --color-def: #fff;
-    --color-primary: #007CFF;
-    --color-primary-content: #D1E9F1;
-    --color-primary-active: #8260F4;
-    --color-secondary: #000;
-    --color-secondary-content: #000;
-    --color-info: #009BE5;
-    --color-info-content: #D1E9F1;
-    --color-info-active: #8260F4;
-    --color-neutral: #629fae;
-    --color-neutral-content: #fff;
-    --color-neutral-active: #427b8a;
-    --color-bermuda: #F9F871;
-    --color-error: #f43f5e;
-    --color-warning: #facc15;
+    --color-primary: 5 89 253;
+    --color-primary-100: 2 19 53;
+    --color-primary-200: 2 36 103;
+    --color-primary-300: 3 54 153;
+    --color-primary-400: 5 81 231;
+    --color-primary-500: 5 89 253;
+    --color-primary-600: 30 105 253;
+    --color-primary-700: 116 163 253;
+    --color-primary-800: 171 200 253;
+    --color-primary-900: 226 237 254;
+
+    --color-surface: 126 132 142;
+    --color-surface-100: 2 11 31;
+    --color-surface-200: 12 19 44;
+    --color-surface-300: 24 32 64;
+    --color-surface-400: 47 55 86;
+    --color-surface-500: 126 132 142;
+    --color-surface-600: 196 212 236;
+    --color-surface-700: 220 233 252;
+    --color-surface-800: 243 248 252;
+    --color-surface-900: 251 253 254;
+
+    --color-gray: 103 103 103;
+    --color-gray-100: 0 0 0;
+    --color-gray-200: 26 26 26;
+    --color-gray-300: 51 51 51;
+    --color-gray-400: 78 78 78;
+    --color-gray-500: 103 103 103;
+    --color-gray-600: 128 128 128;
+    --color-gray-700: 154 154 154;
+    --color-gray-800: 179 179 179;
+    --color-gray-900: 205 205 205;
+
+    --colors-green: 6 35 36;
+    --colors-green-100: 6 35 36;
+    --colors-green-200: 15 90 47;
+    --colors-green-300: 24 144 58;
+    --colors-green-400: 38 229 74;
+    --colors-green-500: 42 253 79;
+    --colors-green-600: 63 253 96;
+    --colors-green-700: 136 253 158;
+    --colors-green-800: 183 253 198;
+    --colors-green-900: 230 253 237;
+
+    --colors-orange: 255 155 11;
+    --colors-orange-100: 27 25 29;
+    --colors-orange-200: 84 57 24;
+    --colors-orange-300: 141 90 20;
+    --colors-orange-400: 230 140 13;
+    --colors-orange-500: 255 155 11;
+    --colors-orange-600: 255 165 35;
+    --colors-orange-700: 253 199 120;
+    --colors-orange-800: 252 221 175;
+    --colors-orange-900: 251 243 230;
+
+    --colors-pink: 237 33 255;
+    --colors-pink-100: 26 13 53;
+    --colors-pink-200: 79 18 104;
+    --colors-pink-300: 132 23 154;
+    --colors-pink-400: 214 31 233;
+    --colors-pink-500: 237 33 255;
+    --colors-pink-600: 239 55 255;
+    --colors-pink-700: 244 132 255;
+    --colors-pink-800: 247 181 255;
+    --colors-pink-900: 250 231 254;
+
+    --colors-purple: 121 38 255;
+    --colors-purple-100: 14 14 53;
+    --colors-purple-200: 40 20 104;
+    --colors-purple-300: 67 26 154;
+    --colors-purple-400: 109 35 233;
+    --colors-purple-500: 121 38 255;
+    --colors-purple-600: 134 60 255;
+    --colors-purple-700: 179 135 255;
+    --colors-purple-800: 208 183 255;
+    --colors-purple-900: 238 232 254;
+
+    --colors-red: 255 50 49;
+    --colors-red-100: 27 15 33;
+    --colors-red-200: 84 24 37;
+    --colors-red-300: 141 33 41;
+    --colors-red-400: 230 46 47;
+    --colors-red-500: 255 50 49;
+    --colors-red-600: 255 70 69;
+    --colors-red-700: 253 142 141;
+    --colors-red-800: 252 187 187;
+    --colors-red-900: 251 233 233;
+
+    --colors-sky-blue: 8 252 255;
+    --colors-sky-blue-100: 3 35 53;
+    --colors-sky-blue-200: 12 19 44;
+    --colors-sky-blue-300: 5 143 154;
+    --colors-sky-blue-400: 7 228 233;
+    --colors-sky-blue-500: 8 252 255;
+    --colors-sky-blue-600: 32 252 255;
+    --colors-sky-blue-700: 118 253 255;
+    --colors-sky-blue-800: 172 253 255;
+    --colors-sky-blue-900: 227 253 254;
+
+    --colors-yellow: 250 255 0;
+    --colors-yellow-100: 27 35 28;
+    --colors-yellow-200: 82 90 21;
+    --colors-yellow-300: 138 145 14;
+    --colors-yellow-400: 225 231 3;
+    --colors-yellow-500: 250 255 0;
+    --colors-yellow-600: 250 255 25;
+    --colors-yellow-700: 250 254 115;
+    --colors-yellow-800: 251 254 172;
+    --colors-yellow-900: 251 253 229;
   }
 }
