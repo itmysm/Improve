@@ -16,7 +16,7 @@
                 <h3 class="text-2xl	text-surface-900 mr-4">کاربر جدید</h3>
                 
                 <button @click="open = false">
-                  <img src="../../assets/icons/Close.png" alt="">
+                  <CloseIcon class="!fill-surface-900"/>
                 </button>
               </div>
 
@@ -41,6 +41,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import CloseIcon from '../icons/close.vue'
 import Button from '../UI/Button.vue'
 import ModalForm from '../UI/Form.vue'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
