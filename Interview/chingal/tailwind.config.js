@@ -122,6 +122,10 @@ module.exports = {
       'yellow-800': 'rgb(var(--color-yellow-800) / <alpha-value>)',
       'yellow-900': 'rgb(var(--color-yellow-900) / <alpha-value>)',
     },
+
+    fontFamily: {
+      'sans': ['yekan', 'Arial', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],
