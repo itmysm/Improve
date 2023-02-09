@@ -4,7 +4,7 @@ import { appearanceSetter } from '../utils/appearance'
 export const useMainStore = defineStore('main', {
   state: () => ({
     appearance: {
-      theme: 'default',
+      theme: 'dark',
       lang: 'en',
     }
   }),
