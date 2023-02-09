@@ -7,7 +7,7 @@
     <hr class="w-full h-[2px] bg-surface-200">
 
     <div class="w-full flex justify-between mt-16 px-12">
-      <Button text="کاربر جدید" />
+      <NewUser />
       <Breadcrumbs />
     </div>
 
@@ -18,7 +18,7 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue'
 import Breadcrumbs from './components/UI/Breadcrumbs.vue'
-import Button from './components/UI/Button.vue'
+import NewUser from './components/UI/Modal-User.vue'
 import { onMounted } from 'vue';
 import { useMainStore } from './stores';
 

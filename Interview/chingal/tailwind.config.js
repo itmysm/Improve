@@ -132,7 +132,11 @@ module.exports = {
       'arrow-left': "url('./src/assets/icons/arrow-left.png')",
     },
 
-    extend: {},
+    extend: {
+      boxShadow: {
+        'confirm': '0px 0px 26px 5px rgb(var(--color-primary) / 20%)',
+      },
+    },
   },
   plugins: [],
 }
