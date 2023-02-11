@@ -134,7 +134,9 @@ module.exports = {
 
     extend: {
       boxShadow: {
-        'confirm': '0px 0px 26px 5px rgb(var(--color-primary) / 20%)',
+        'primary': '-1px 2px 61px -30px rgb(var(--color-primary) / 20%)',
+        'red': '0px 0px 26px 5px rgb(var(--color-red) / 20%)',
+        'white': '0px 0px 26px 5px rgb(255 255 255) / 20%)',
       },
     },
   },

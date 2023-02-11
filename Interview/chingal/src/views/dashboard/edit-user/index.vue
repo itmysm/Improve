@@ -1,3 +1,8 @@
 <template>
-  <div>1</div>
+  <div>
+    test
+  </div>
 </template>
+
+<script setup>
+</script>

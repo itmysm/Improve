@@ -1,8 +1,36 @@
 @import './fonts.css';
 @import './tailwind.css';
 
-
-
 .bg-surface--gradient {
   background: linear-gradient(200.68deg, rgb(var(--color-surface-300) / 0%), rgb(var(--color-surface-300) / 82.07%));
+}
+
+/* scroll bar styles */
+
+* {
+  scrollbar-color: rgb(var(--color-surface-400) / 100%) rgb(var(--color-surface-300) / 100%);
+  scrollbar-width: thin;
+  scrollbar-highlight-color: rgb(var(--color-primary-500) / 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface-300) / 100%);
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-surface-400) / 100%);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-primary-500) / 100%);
 }
