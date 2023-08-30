@@ -1,11 +1,16 @@
 <template>
   <div>
     <button @click="onLogin">Login</button>
-      <button class="mx-2" @click="onRegister">Register</button>
+    <button class="mx-2" @click="onRegister">Register</button>
+    <button class="mx-2" @click="useRouter().push('/')">Back</button>
   </div>
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: 'auth'
+})
+
 import { useAuth } from "@/store/auth/index.ts";
 const authStore = useAuth();
 
