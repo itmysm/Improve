@@ -13,7 +13,12 @@ export const useActions = defineStore("repo.actions", () => {
     http.post("login", payload);
   }
 
+  function register(payload: any) {
+    http.post("register", payload)
+  }
+
   return {
     login,
+    register
   };
 });

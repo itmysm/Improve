@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="onLogin">Login</button>
+      <button class="mx-2" @click="onRegister">Register</button>
   </div>
 </template>
 
@@ -10,8 +11,16 @@ const authStore = useAuth();
 
 function onLogin() {
   authStore.login({
-    username: "itmysm",
     email: "itmysm@gmail.com",
+    username: "itmysm",
+    password: "gmail.com",
+  });
+}
+
+function onRegister() {
+  authStore.register({
+    email: "itmysm@gmail.com",
+    username: "itmysm",
     password: "gmail.com",
   });
 }
