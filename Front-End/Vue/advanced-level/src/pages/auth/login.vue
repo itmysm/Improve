@@ -1,13 +1,18 @@
 <template>
   <div>
-    <button @click="onLoginEvent">Login</button>
+    <button @click="onLogin">Login</button>
   </div>
 </template>
 
 <script setup>
-console.log("hello script setup");
+import { useAuth } from "@/store/auth/index.ts";
+const authStore = useAuth();
 
-function onLoginEvent() {
-  console.log('login');
+function onLogin() {
+  authStore.login({
+    username: "itmysm",
+    email: "itmysm@gmail.com",
+    password: "gmail.com",
+  });
 }
 </script>

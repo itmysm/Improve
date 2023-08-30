@@ -6,16 +6,14 @@ const http = createHttpClient({
   prefixUrl: "https://reqres.in/api/",
 });
 
-console.log("All Environment Variables:", process.env);
-
 export const useActions = defineStore("repo.actions", () => {
   const state = useState();
 
-  function onGetUsers() {
-    http.get("users");
+  function login(payload: any) {
+    http.post("login", payload);
   }
 
   return {
-    onGetUsers,
+    login,
   };
 });

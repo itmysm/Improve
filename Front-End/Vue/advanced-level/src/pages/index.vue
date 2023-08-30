@@ -1,12 +1,10 @@
 <template>
-  <div>Normal Page</div>
+  <div @click="authStore.onGetUsers">Normal Page</div>
 </template>
 
 <script lang="ts" setup>
 import { useAuth } from "../store/auth/index.ts";
-const authStore = useAuth()
-
-authStore.onGetUsers()
+const authStore = useAuth();
 
 definePageMeta({
   layout: "default",

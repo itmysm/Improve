@@ -6,7 +6,7 @@ const defaultOptions = {
   tokenRefreshUrl: "",
   onError: console.error,
   autoCamelCase: true,
-  prefixUrl: '',
+  prefixUrl: "",
   timeout: 3000,
 };
 
@@ -16,7 +16,9 @@ export default function createHttpClient(options: Partial<HttpClientOptions>) {
   const mergedOptions = { ...defaultOptions, ...options };
 
   const showError = (error: Error) => {
-    console.log(error);
+    window.alert(
+      error?.message || "an error in httpClient util/lib"
+    );
   };
 
   const client = axios.create({
